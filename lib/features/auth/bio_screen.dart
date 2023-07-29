@@ -1,11 +1,33 @@
+
+
 import 'package:application/core/routes.dart';
 import 'package:flutter/material.dart';
-
+import 'package:geolocator/geolocator.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../core/resources/manager_colors.dart';
+import 'package:jiffy/jiffy.dart';
 
-class bio extends StatelessWidget {
+class bio extends StatefulWidget {
   const bio({super.key});
 
+
+
+  @override
+  State<bio> createState() => _bioState();
+}
+
+class _bioState extends State<bio> {
+   DateTime a1 = DateTime.now().subtract(Duration(days: 365));
+   cheng() async {
+     await Jiffy.setLocale('ar');
+   }
+  
+  @override
+  void initState() {
+    cheng();
+    super.initState();
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,16 +43,14 @@ class bio extends StatelessWidget {
 
       ),
       extendBodyBehindAppBar: true,
-      body: Container(
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin:AlignmentDirectional.topStart ,
-                end: AlignmentDirectional.bottomStart,
-                colors: [
-          ColorsApp.PrimaryColor,
-           ColorsApp.secondaryColor,
-        ])),
-      ),
+      body: Column(
+        children: [
+          Container(height: 400,width: double.infinity,color: Colors.black,),
+          TextButton(onPressed: (){
+           print(Jiffy.parse(a1.toString()).fromNow());
+          }, child: Text("add"),style: TextButton.styleFrom(backgroundColor: Colors.black),),
+        ],
+      )
     );
   }
 }
