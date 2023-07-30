@@ -49,6 +49,8 @@ class _bioState extends State<bio> {
           TextButton(onPressed: (){
            print(Jiffy.parse(a1.toString()).fromNow());
           }, child: Text("add"),style: TextButton.styleFrom(backgroundColor: Colors.black),),
+          Text("sadfasdas",style: TextStyle(fontFamily: "ReemKufiFun",fontSize: 50),),
+          Text("sadfasdas",style: TextStyle(fontFamily: "",fontSize: 50),),
         ],
       )
     );
