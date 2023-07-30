@@ -1,6 +1,6 @@
 import 'package:application/core/routes.dart';
-import 'package:application/features/auth/bio_screen.dart';
-import 'package:application/features/auth/splash_screen.dart';
+import 'package:application/features/auth/boi_screen/bio_screen.dart';
+import 'package:application/features/auth/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 

@@ -1,6 +1,7 @@
-import 'package:application/core/resources/manager_fontsizes.dart';
-import 'package:application/core/resources/manager_fontweight.dart';
-import 'package:application/core/resources/manager_strings.dart';
+import 'package:application/core/resources/manager/manager_fontsizes.dart';
+import 'package:application/core/resources/manager/manager_fontweight.dart';
+import 'package:application/core/resources/manager/manager_strings.dart';
+
 import 'package:application/core/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class _splash_screenState extends State<splash_screen> {
     super.initState();
 
     // Navigator.pushReplacementNamed(context, routes.bioScreen);}
-    Future.delayed(Duration(seconds: 2), () {Navigator.pushNamed(context, routes.bioScreen);});
+    Future.delayed(Duration(seconds: 2), () {Navigator.popAndPushNamed(context, routes.bioScreen);});
   }
 
   @override

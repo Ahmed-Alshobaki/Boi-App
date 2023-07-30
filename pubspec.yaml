@@ -82,7 +82,7 @@ flutter:
   fonts:
     - family: ReemKufiFun
       fonts:
-        - asset: lib/resources/fonts/static/ReemKufiFun-SemiBold.ttf
+        - asset: lib/core/resources/fonts/static/ReemKufiFun-SemiBold.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
